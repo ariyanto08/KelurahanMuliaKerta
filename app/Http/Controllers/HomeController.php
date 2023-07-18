@@ -37,9 +37,9 @@ class HomeController  extends Controller
         $data['list_penduduk'] = Penduduk::all();
         return view('content.kelolasurat.mati.index', $data);
     }
-    function cetakmati()
+    function cetakmati(Kematian $kematian)
     {
-        $data['list_kematian'] = Kematian::all();
+        $data['kematian'] = $kematian;
         $nama_pelapor = request()->input('nama_pelapor');
         $nik_pelapor = request()->input('nik_pelapor');
         $tmp_lh_pelapor = request()->input('tmp_lh_pelapor');
@@ -51,17 +51,20 @@ class HomeController  extends Controller
         return view('content.kelolasurat.surat.su-mati.sumati', compact('nama_pelapor', 'nik_pelapor', 'tmp_lh_pelapor', 'tgl_lh_pelapor', 'pekerjaan_pelapor', 'alamat_pelapor', 'hub_pelapor', 'tgl_sur'), $data);
     }
 
-    function indexlahir()
+    function indexlahir(Kelahiran $kelahiran)
     {
+        $data['kelahiran'] = $kelahiran;
         $data['list_lahir'] = Kelahiran::all();
         return view('content.kelolasurat.lahir.index', $data);
     }
-    function cetaklahir()
+    function cetaklahir(Kelahiran $kelahiran )
     {
-        $data['list_kelahiran'] = Kelahiran::all();
-        $data['list_penduduk'] = Penduduk::all();
-        $data['list_keluarga'] = Keluarga::all();
+
+        $data['kelahiran'] = $kelahiran;
+        $data['penduduk'] = Penduduk::all();
+        $data['keluarga'] = Keluarga::all();
         $data['list_anggota'] = Anggota::all();
+
         $tanggalsurat = request()->input('tanggalsurat');
         return view('content.kelolasurat.surat.su-lahir.sulahir', compact('tanggalsurat'), $data);
     }

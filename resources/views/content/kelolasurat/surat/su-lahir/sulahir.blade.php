@@ -112,7 +112,7 @@
                 Kecamatan Benua Kayong Kabupaten Ketapang,
                 menerangkan</span><span lang=IN> bahwa :</span></p>
 
-@foreach ($list_kelahiran as $kelahiran)
+{{-- @foreach ($list_kelahiran as $kelahiran) --}}
         <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span lang=IN>Nama :
             </span>{{ $kelahiran->keluarga->penduduk->nama }}</p>
 
@@ -137,7 +137,7 @@
 
         <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span lang=EN-US>Alamat </span><span lang=IN> :
             </span>{{ $kelahiran->keluarga->penduduk->alamat }}</p>
-@endforeach
+{{-- @endforeach --}}
 
         <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span lang=IN>&nbsp;</span></p>
 
@@ -175,7 +175,7 @@
         <p class=MsoNormal style='text-align:justify;line-height:150%'><span lang=EN-US>Telah Mempunyai Seorang
                 Anak</span><span lang=IN>:</span></p>
 
-@foreach ($list_kelahiran as $kelahiran)
+{{-- @foreach ($list_kelahiran as $kelahiran) --}}
         <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span lang=EN-US>Jenis Kelamin </span><span
                 lang=IN> : </span>{{$kelahiran->jekel}}</p>
 
@@ -191,7 +191,7 @@
         <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span lang=EN-US>Anak Yang Ke : </span>{{$kelahiran->anakke}}</p>
 
         <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span lang=EN-US>Alamat : </span>{{$kelahiran->alamat}}</p>
-@endforeach
+{{-- @endforeach --}}
         <p class=MsoNormal style='text-align:justify;line-height:150%'><span lang=IN>&nbsp;</span></p>
 
         <p class=MsoNormal style='text-align:justify;line-height:150%'><span lang=IN>Demikian

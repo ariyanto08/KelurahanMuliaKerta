@@ -102,7 +102,7 @@
         <p class=MsoNormal style='text-align:justify'><span lang=IN>Yang bertanda
                 tangan di bawah ini Kepala Desa Kemiri, Kecamatan Jepon, Kabupaten Blora
                 menerangkan bahwa :</span></p>
-@foreach ($list_kematian as $kematian)
+{{-- @foreach ($list_kematian as $kematian) --}}
         <p class=MsoNormal style='margin-left:.5in;text-align:justify'><span lang=IN>Nama :
                 {{$kematian->penduduk->nama}}</span></p>
 
@@ -147,7 +147,7 @@
         <p class=MsoNormal style='margin-left:.5in;text-align:justify'>Tempat Pemakaman :
             <b>{{$kematian->tempat_makam}}</b>
         </p>
-@endforeach
+{{-- @endforeach --}}
         <p class=MsoNormal style='text-align:justify'><span lang=IN>Surat ke</span>terangan<span lang=IN> ini
                 berdasarkan keterangan </span>dari<span lang=IN>:</span></p>
 

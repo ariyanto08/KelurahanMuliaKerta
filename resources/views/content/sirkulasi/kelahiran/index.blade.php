@@ -27,6 +27,7 @@
                                         <div class="btn-group">
                                             <x-button.edit url="admin/kelahiran" id="{{ $kelahiran->id_lahir }}" />
                                             <x-button.delete url="admin/kelahiran" id="{{ $kelahiran->id_lahir }}" />
+                                            <a target="_blank" href="{{ url('admin/su-lahir', $kelahiran->id_lahir) }}" class="btn btn-primary">Cetak Surat</a>
                                         </div>
                                     </td>
                                 </tr>

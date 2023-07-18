@@ -33,6 +33,7 @@
                                         <div class="btn-group">
                                             <x-button.edit url="admin/kematian" id="{{ $kematian->id_mendu }}" />
                                             <x-button.delete url="admin/kematian" id="{{ $kematian->id_mendu }}" />
+                                            <a target="_blank" href="{{ url('admin/su-mati', $kematian->id_mendu) }}" class="btn btn-primary">Cetak Surat</a>
                                         </div>
                                     </td>
                                 </tr>

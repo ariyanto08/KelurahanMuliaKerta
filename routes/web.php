@@ -41,13 +41,12 @@ Route::get('kontak', [FrontController::class, 'kontak']);
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
 
     Route::get('dashboard', [HomeController::class, 'index']);
-
     Route::get('mati', [HomeController::class, 'indexmati']);
     Route::get('miskin', [HomeController::class, 'indexmiskin']);
     Route::get('lahir', [HomeController::class, 'indexlahir']);
-    Route::get('su-mati', [HomeController::class, 'cetakmati']);
+    Route::get('su-mati/{kematian}', [HomeController::class, 'cetakmati']);
     Route::get('su-miskin', [HomeController::class, 'cetakmiskin']);
-    Route::get('su-lahir', [HomeController::class, 'cetaklahir']);
+    Route::get('su-lahir/{kelahiran}', [HomeController::class, 'cetaklahir']);
     Route::resource('kelahiran', KelahiranController::class);
     // Route::resource('kematian', MeninggalController::class);
     Route::get('kematian', [KematianController::class, 'index']);

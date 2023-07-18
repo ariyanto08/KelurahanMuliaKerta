@@ -9,12 +9,12 @@
             <div class="card-body">
                 <div class="row">
                     <label>Data Anak</label>
-                    <input class="form-control" type="text" list="list_lahir" style="width: 100%;" name="nik"
+                    <input class="form-control" type="text" list="list_lahir" style="width: 100%;"
                         onkeyup="cekId(this.value)">
                     <datalist id=list_lahir>
                         @foreach ($list_lahir as $lahir)
-                            <option value="{{ $lahir->nama }}">
-                                {{ $lahir->no_kk }}
+                            <option value="{{ $lahir->id_lahir }}">
+                                {{ $lahir->no_kk }}-{{ $lahir->nama }}
                             </option>
                         @endforeach
                     </datalist>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <input type="submit" name="su-lahir" value="Cetak" class="btn btn-info">
+                <input type="submit" class="btn btn-info">
             </div>
         </form>
     </div>
